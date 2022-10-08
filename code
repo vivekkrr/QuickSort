@@ -27,7 +27,24 @@ void display() {
    printf("]\n");
 }
 
+void swap(int num1, int num2) {
+   int temp = intArray[num1];
+   intArray[num1] = intArray[num2];
+   intArray[num2] = temp;
+}
 
+int partition(int left, int right, int pivot) {
+   int leftPointer = left -1;
+   int rightPointer = right;
+
+   while(true) {
+      while(intArray[++leftPointer] < pivot) {
+         //do nothing
+      }
+		
+      while(rightPointer > 0 && intArray[--rightPointer] > pivot) {
+         //do nothing
+      }
 
       if(leftPointer >= rightPointer) {
          break;
